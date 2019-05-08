@@ -11,7 +11,7 @@ describe('Concurrent Invocation Tests', function() {
   describe('Delays', function() {
     it('should return true after 75ms (default)', function(done) {
       this.slow(500)
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = {
         warmer: true,
         __WARMER_INVOCATION__: 2, // send invocation number
@@ -29,7 +29,7 @@ describe('Concurrent Invocation Tests', function() {
 
     it('should return true after 100ms', function(done) {
       this.slow(500)
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = {
         warmer: true,
         __WARMER_INVOCATION__: 2, // send invocation number
@@ -47,7 +47,7 @@ describe('Concurrent Invocation Tests', function() {
 
     it('should return true after 200ms', function(done) {
       this.slow(500)
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = {
         warmer: true,
         __WARMER_INVOCATION__: 2, // send invocation number
@@ -65,7 +65,7 @@ describe('Concurrent Invocation Tests', function() {
 
     it('should return true after 25ms', function(done) {
       this.slow(500)
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = {
         warmer: true,
         __WARMER_INVOCATION__: 2, // send invocation number
@@ -88,7 +88,7 @@ describe('Concurrent Invocation Tests', function() {
 
     it('should capture default data correctly', function(done) {
       this.slow(500)
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = {
         warmer: true,
         __WARMER_INVOCATION__: 2, // send invocation number
@@ -119,7 +119,7 @@ describe('Concurrent Invocation Tests', function() {
 
     it('should capture configured data correctly', function(done) {
       this.slow(500)
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = {
         warmerX: true,
         __WARMER_INVOCATION__: 2, // send invocation number
@@ -151,7 +151,7 @@ describe('Concurrent Invocation Tests', function() {
 
     it('should capture data correctly and be pre-warmed', function(done) {
       this.slow(500)
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = {
         warmer: true,
         __WARMER_INVOCATION__: 2, // send invocation number

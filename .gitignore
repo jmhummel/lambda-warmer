@@ -10,3 +10,8 @@ dump.rdb
 # Coverage reports
 .nyc_output
 coverage
+
+#
+.js
+.d.ts
+.js.map

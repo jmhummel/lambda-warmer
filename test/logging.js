@@ -10,7 +10,7 @@ describe('Logging Tests', function() {
 
   describe('Using standard warming invocation', function() {
     it('should capture logging data', function(done) {
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = { warmer: true, concurrency: 1 }
 
       let logger = console.log
@@ -33,7 +33,7 @@ describe('Logging Tests', function() {
     })
 
     it('should capture logging data with correlationId', function(done) {
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = { warmer: true, concurrency: 1 }
 
       let logger = console.log
@@ -56,7 +56,7 @@ describe('Logging Tests', function() {
     })
 
     it('should disable logging', function(done) {
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = { warmer: true, concurrency: 1 }
 
       let logger = console.log
@@ -73,7 +73,7 @@ describe('Logging Tests', function() {
     })
 
     it('should capture logging data (pre-warmed)', function(done) {
-      let warmer = rewire('../index')
+      let warmer = rewire('../index').warmer
       let event = { warmer: true, concurrency: 1 }
 
       let logger = console.log
