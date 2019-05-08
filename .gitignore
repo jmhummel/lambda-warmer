@@ -12,6 +12,6 @@ dump.rdb
 coverage
 
 #
-.js
-.d.ts
-.js.map
+*.js
+*.d.ts
+*.js.map
